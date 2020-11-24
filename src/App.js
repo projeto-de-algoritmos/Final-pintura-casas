@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Graph from "react-graph-vis";
 
-const BLUE_COLOR = "#03787C";
-const ORANGE_COLOR = "#e68057";
+const PRIMARY_COLOR = "#63048C";
 
 function App() {
   const graph = {
@@ -12,7 +11,7 @@ function App() {
       { id: 2, label: "", title: "node 2 tootip text" },
       { id: 3, label: "", title: "node 3 tootip text" },
       { id: 4, label: "", title: "node 4 tootip text" },
-      { id: 5, label: "", title: "node 5 tootip text" },
+      { id: 5, label: "", title: "node 5 tootip text", color: "#545774" },
     ],
     edges: [
       { from: 1, to: 2 },
@@ -24,10 +23,13 @@ function App() {
 
   const options = {
     layout: {
-      hierarchical: true,
+      hierarchical: false,
     },
     edges: {
-      color: "#000000",
+      color: "#353535",
+    },
+    nodes: {
+      color: PRIMARY_COLOR,
     },
     height: "500px",
   };
@@ -43,11 +45,11 @@ function App() {
         <div className="text-center mb-4 pt-4" style={{ color: "#353535" }}>
           <h1 className="mb-3">
             Projeto{" "}
-            <span className="bold-text" style={{ color: "BLUE_COLOR" }}>
+            <span className="bold-text" style={{ color: PRIMARY_COLOR }}>
               Pintura de casas
             </span>
           </h1>
-          <p>Historia</p>
+          
         </div>
         <div className="row">
           <div className="col d-flex justify-content-center mt-3">
