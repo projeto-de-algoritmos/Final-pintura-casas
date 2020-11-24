@@ -2,17 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Graph from "react-graph-vis";
 
-const PRIMARY_COLOR = "#63048C";
+const PRIMARY_COLOR = "#7641BF";
 
 function App() {
   const graph = {
-    nodes: [
-      { id: 1, label: "", title: "node 1 tootip text" },
-      { id: 2, label: "", title: "node 2 tootip text" },
-      { id: 3, label: "", title: "node 3 tootip text" },
-      { id: 4, label: "", title: "node 4 tootip text" },
-      { id: 5, label: "", title: "node 5 tootip text", color: "#545774" },
-    ],
+    nodes: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }],
     edges: [
       { from: 1, to: 2 },
       { from: 1, to: 3 },
@@ -31,7 +25,7 @@ function App() {
     nodes: {
       color: PRIMARY_COLOR,
     },
-    height: "500px",
+    height: "450px",
   };
 
   const events = {
@@ -72,7 +66,7 @@ function App() {
         </div>
         <div className="d-flex justify-content-center mt-5 align-items-center">
           <button className="btn handle-btn finish mr-5">Novo Mapa</button>
-          <button className="btn handle-btn start">Jogar</button>
+          <button className="btn handle-btn start">Pintar casas</button>
         </div>
       </div>
     </div>
