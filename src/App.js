@@ -49,7 +49,14 @@ function App() {
               Pintura de casas
             </span>
           </h1>
-          
+          <p>
+            Luana era uma pintora experiente. Um dia, um velho matemático que
+            possuia uma parte da cidade jougou um desafio a ela. Ele queria
+            pintar todas as casas que possuia de tal forma que as casas das
+            esquinas não tivesse a mesma cor com a que estava conectada. Por
+            esse motivo, luana o contratou para dizer a ela quais cores as casas
+            devem ser pintadas, pois ela não tem tempo a perder.
+          </p>
         </div>
         <div className="row">
           <div className="col d-flex justify-content-center mt-3">
