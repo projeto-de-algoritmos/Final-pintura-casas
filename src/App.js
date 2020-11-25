@@ -29,6 +29,17 @@ function App() {
     setFormatedGraph(formatedGraph);
   }, [])
 
+  function handleReset() {
+    const graph = generateGraph();
+    const formatedGraph = formatGraph(graph);
+
+    setGraph(graph);
+    setFormatedGraph(null);
+    setTimeout(() => {
+      setFormatedGraph(formatedGraph)
+    })
+  }
+
   function handleColor() {
     const coloredGraph = colorGraph(graph)
     console.log(coloredGraph)
@@ -75,7 +86,7 @@ function App() {
           </div>
         </div>
         <div className="d-flex justify-content-center mt-5 align-items-center">
-          <button className="btn handle-btn finish mr-5">Novo Mapa</button>
+          <button className="btn handle-btn finish mr-5" onClick={handleReset}>Novo Mapa</button>
           <button className="btn handle-btn start" onClick={handleColor}>Pintar casas</button>
         </div>
       </div>
