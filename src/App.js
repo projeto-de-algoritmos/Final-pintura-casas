@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Graph from "react-graph-vis";
+import MyGraph from './algorithm/Graph';
+import colorGraph from './algorithm/colorGraph';
+import generateGraph from "./algorithm/generateGraph";
+import formatGraph from "./algorithm/formatGraph";
 
 const PRIMARY_COLOR = "#7641BF";
 
 function App() {
-  const graph = {
-    nodes: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }],
-    edges: [
-      { from: 1, to: 2 },
-      { from: 1, to: 3 },
-      { from: 2, to: 4 },
-      { from: 2, to: 5 },
-    ],
-  };
+  const [graph, setGraph] = useState(null);
+  const [formatedGraph, setFormatedGraph] = useState(null);
 
   const options = {
     layout: {
@@ -27,12 +24,19 @@ function App() {
     },
     height: "450px",
   };
+  useEffect(() => {
+    const graph = generateGraph();
+    const formatedGraph = formatGraph(graph);
 
-  const events = {
-    select: function (event) {
-      var { nodes, edges } = event;
-    },
-  };
+    setGraph(graph);
+    setFormatedGraph(formatedGraph);
+  }, [])
+
+  function handleColor() {
+    const coloredGraph = colorGraph(graph)
+    console.log(coloredGraph)
+  }
+
   return (
     <div className="bg-light" style={{ height: "100vh" }}>
       <div className="container">
@@ -52,21 +56,24 @@ function App() {
             devem ser pintadas, pois ela não tem tempo a perder.
           </p>
         </div>
-        <div className="row">
-          <div className="col d-flex justify-content-center mt-3">
-            <Graph
-              graph={graph}
-              options={options}
-              events={events}
-              getNetwork={(network) => {
-                //  if you want access to vis.js network api you can set the state in a parent component using this property
-              }}
-            />
-          </div>
-        </div>
+        {
+          formatedGraph && (
+            <div className="row">
+              <div className="col d-flex justify-content-center mt-3">
+                <Graph
+                  graph={formatedGraph}
+                  options={options}
+                  getNetwork={(network) => {
+                    //  if you want access to vis.js network api you can set the state in a parent component using this property
+                  }}
+                />
+              </div>
+            </div>
+          )
+        }
         <div className="d-flex justify-content-center mt-5 align-items-center">
           <button className="btn handle-btn finish mr-5">Novo Mapa</button>
-          <button className="btn handle-btn start">Pintar casas</button>
+          <button className="btn handle-btn start" onClick={handleColor}>Pintar casas</button>
         </div>
       </div>
     </div>
