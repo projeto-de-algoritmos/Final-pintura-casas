@@ -19,9 +19,6 @@ function App() {
     edges: {
       color: "#353535",
     },
-    nodes: {
-      color: PRIMARY_COLOR,
-    },
     height: "450px",
   };
   useEffect(() => {
@@ -35,6 +32,12 @@ function App() {
   function handleColor() {
     const coloredGraph = colorGraph(graph)
     console.log(coloredGraph)
+    const formatedGraph = formatGraph(coloredGraph);
+    setGraph(graph);
+    setFormatedGraph(null);
+    setTimeout(() => {
+      setFormatedGraph(formatedGraph)
+    }, 50)
   }
 
   return (
@@ -56,10 +59,10 @@ function App() {
             devem ser pintadas, pois ela não tem tempo a perder.
           </p>
         </div>
-        {
-          formatedGraph && (
-            <div className="row">
-              <div className="col d-flex justify-content-center mt-3">
+        <div className="row">
+          <div className="graph-area">
+            {
+              formatedGraph ? (
                 <Graph
                   graph={formatedGraph}
                   options={options}
@@ -67,10 +70,10 @@ function App() {
                     //  if you want access to vis.js network api you can set the state in a parent component using this property
                   }}
                 />
-              </div>
-            </div>
-          )
-        }
+              ) : null
+            }
+          </div>
+        </div>
         <div className="d-flex justify-content-center mt-5 align-items-center">
           <button className="btn handle-btn finish mr-5">Novo Mapa</button>
           <button className="btn handle-btn start" onClick={handleColor}>Pintar casas</button>
