@@ -1,5 +1,7 @@
+import Graph from './Graph';
+
 export default function generateGraph() {
-    const graph = new MyGraph();
+    const graph = new Graph();
 
     graph.addNode(1)
     graph.addNode(2)
