@@ -30,4 +30,16 @@ export default class Graph {
         }
         return;
     }
+
+    getNumberOfNodes() {
+        return this.nodes.length;
+    }
+
+    getNumberOfEdges() {
+        let count = 0;
+        this.nodes.forEach(node => {
+            count += node.edges.length;
+        })
+        return count;
+    }
 }
