@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Graph from "react-graph-vis";
-import MyGraph from './algorithm/Graph';
 import colorGraph from './algorithm/colorGraph';
 import generateGraph from "./algorithm/generateGraph";
 import formatGraph from "./algorithm/formatGraph";
