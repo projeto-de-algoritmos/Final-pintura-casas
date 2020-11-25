@@ -1,45 +1,20 @@
-import Node from './Node';
-
 export default class Graph {
-    constructor(undirected = false) {
-        this.undirected = undirected;
+    constructor() {
+        this.edges = {};
+        this.colors = {};
         this.nodes = [];
     }
 
-    addNode(value) {
-        this.nodes.push(new Node(value));
-    }
-    removeNode(value) {
-        this.nodes = this.nodes.filter(node => node.id !== value);
-        this.nodes.forEach(node => {
-            node.edges = node.edges.filter(edge => edge.id !== value);
-        })
-    }
-    getNode(value) {
-        return this.nodes.find(node => node.id === value);
+    addNode(node) {
+        this.nodes.push(node);
+        this.edges[node] = [];
+        this.colors[node] = -1;
     }
 
-    addEdge(value1, value2) {
-        const node1 = this.getNode(value1);
-        const node2 = this.getNode(value2);
-
-        node.edges.push(node2);
-
-        if (this.undirected) {
-            node2.edges.push(node1);
+    addEdge(node1, node2) {
+        if (node1 !== node2) {
+            this.edges[node1].push(node2);
+            this.edges[node2].push(node1);
         }
-        return;
-    }
-
-    getNumberOfNodes() {
-        return this.nodes.length;
-    }
-
-    getNumberOfEdges() {
-        let count = 0;
-        this.nodes.forEach(node => {
-            count += node.edges.length;
-        })
-        return count;
     }
 }
