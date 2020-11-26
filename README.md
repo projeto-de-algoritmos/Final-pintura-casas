@@ -26,8 +26,8 @@ Um vídeo da apresentação pode ser encontrado [AQUI]().
 
 ## Screenshots
 
-<!-- ![](https://raw.githubusercontent.com/projeto-de-algoritmos/D-P_minimum-cost/master/assets/Screenshot%20from%202020-11-22%2014-56-17.png)
-![](https://raw.githubusercontent.com/projeto-de-algoritmos/D-P_minimum-cost/master/assets/Screenshot%20from%202020-11-22%2014-56-34.png) -->
+![](https://github.com/projeto-de-algoritmos/Final-pintura-casas/blob/main/assets/1.png)
+![](https://github.com/projeto-de-algoritmos/Final-pintura-casas/blob/main/assets/2.png)
 
 ## Instalação
 
