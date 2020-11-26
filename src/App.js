@@ -62,11 +62,12 @@ function App() {
           </h1>
           <p>
             Luana era uma pintora experiente. Um dia, um velho matemático que
-            possuia uma parte da cidade jougou um desafio a ela. Ele queria
-            pintar todas as casas que possuia de tal forma que as casas das
-            esquinas não tivesse a mesma cor com a que estava conectada. Por
-            esse motivo, luana o contratou para dizer a ela quais cores as casas
-            devem ser pintadas, pois ela não tem tempo a perder.
+            possuia muitas casas na cidade, muitas dessas partes eram ruas que
+            se conectavam, jougou um desafio à ela. Ele queria pintar todas as
+            casas que ele possuia de tal forma que as casas das esquinas não
+            tivessem a mesma cor com a que estava conectada. Por esse motivo,
+            luana o contratou para dizer a ela quais cores as casas devem ser
+            pintadas, pois ela não tem tempo a perder.
           </p>
         </div>
         <div className="row">
