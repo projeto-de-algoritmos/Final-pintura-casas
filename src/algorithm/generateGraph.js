@@ -11,11 +11,19 @@ export default function generateGraph() {
 
   const edgeAmount = getEdgeAmount(graphSize);
 
-  //   graph.addEdge(1, 2);
-  //   graph.addEdge(2, 3);
-  //   graph.addEdge(2, 4);
-  //   graph.addEdge(2, 5);
-  //   graph.addEdge(3, 4);
+  let node = 1;
+  let neighbor = 2;
+
+  for (let index = 1; index <= edgeAmount; index++) {
+    if (neighbor === node) continue;
+
+    graph.addEdge(node, neighbor);
+
+    if (neighbor === graphSize) {
+      node++;
+      neighbor = node + 1;
+    } else neighbor++;
+  }
 
   return graph;
 }
