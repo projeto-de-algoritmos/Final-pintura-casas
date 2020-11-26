@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Graph from "react-graph-vis";
-import colorGraph from './algorithm/colorGraph';
+import colorGraph from "./algorithm/colorGraph";
 import generateGraph from "./algorithm/generateGraph";
 import formatGraph from "./algorithm/formatGraph";
 
@@ -26,7 +26,7 @@ function App() {
 
     setGraph(graph);
     setFormatedGraph(formatedGraph);
-  }, [])
+  }, []);
 
   function handleReset() {
     const graph = generateGraph();
@@ -35,19 +35,19 @@ function App() {
     setGraph(graph);
     setFormatedGraph(null);
     setTimeout(() => {
-      setFormatedGraph(formatedGraph)
-    })
+      setFormatedGraph(formatedGraph);
+    });
   }
 
   function handleColor() {
-    const coloredGraph = colorGraph(graph)
-    console.log(coloredGraph)
+    const coloredGraph = colorGraph(graph);
+    console.log(coloredGraph);
     const formatedGraph = formatGraph(coloredGraph);
     setGraph(graph);
     setFormatedGraph(null);
     setTimeout(() => {
-      setFormatedGraph(formatedGraph)
-    }, 50)
+      setFormatedGraph(formatedGraph);
+    }, 50);
   }
 
   return (
@@ -71,22 +71,24 @@ function App() {
         </div>
         <div className="row">
           <div className="graph-area">
-            {
-              formatedGraph ? (
-                <Graph
-                  graph={formatedGraph}
-                  options={options}
-                  getNetwork={(network) => {
-                    //  if you want access to vis.js network api you can set the state in a parent component using this property
-                  }}
-                />
-              ) : null
-            }
+            {formatedGraph ? (
+              <Graph
+                graph={formatedGraph}
+                options={options}
+                getNetwork={(network) => {
+                  //  if you want access to vis.js network api you can set the state in a parent component using this property
+                }}
+              />
+            ) : null}
           </div>
         </div>
         <div className="d-flex justify-content-center mt-5 align-items-center">
-          <button className="btn handle-btn finish mr-5" onClick={handleReset}>Novo Mapa</button>
-          <button className="btn handle-btn start" onClick={handleColor}>Pintar casas</button>
+          <button className="btn handle-btn finish mr-5" onClick={handleReset}>
+            Novo Mapa
+          </button>
+          <button className="btn handle-btn start" onClick={handleColor}>
+            Pintar casas
+          </button>
         </div>
       </div>
     </div>
