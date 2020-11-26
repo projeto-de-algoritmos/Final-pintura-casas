@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Pintura de Casas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Número da Lista**: Final<br>
+**Conteúdo da Disciplina**: Final<br>
 
-## Available Scripts
+## Alunos
 
-In the project directory, you can run:
+| Matrícula  | Aluno                        |
+| ---------- | ---------------------------- |
+| 17/0033066 | Esio Gustavo Pereira Freitas |
+| 17/0020461 | Pedro Henrique Andrade Feo   |
 
-### `yarn start`
+## Sobre
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Luana era uma pintora experiente. Um dia, um velho matemático que
+possuia muitas casas na cidade, muitas dessas partes eram ruas que
+se conectavam, jougou um desafio à ela. Ele queria pintar todas as
+casas que ele possuia de tal forma que as casas das esquinas não
+tivessem a mesma cor com a que estava conectada. Por esse motivo,
+luana o contratou para dizer a ela quais cores as casas devem ser
+pintadas, pois ela não tem tempo a perder.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Apresentação
 
-### `yarn test`
+Um vídeo da apresentação pode ser encontrado [AQUI]().
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots
 
-### `yarn build`
+<!-- ![](https://raw.githubusercontent.com/projeto-de-algoritmos/D-P_minimum-cost/master/assets/Screenshot%20from%202020-11-22%2014-56-17.png)
+![](https://raw.githubusercontent.com/projeto-de-algoritmos/D-P_minimum-cost/master/assets/Screenshot%20from%202020-11-22%2014-56-34.png) -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Linguagem**: JavaScript<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Fizemos o deploy da aplicação para facilitar o uso dela [AQUI](https://node-painting.netlify.app/).
+No entanto, caso queira rodá-la, é necessário que possua instalado:
 
-### `yarn eject`
+- [Node](https://nodejs.org/en/) e
+- [yarn](https://yarnpkg.com/) ou
+- [npm](https://www.npmjs.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```ssh
+$ yarn install
+$ yarn start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# pode ser usado também:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+$ npm install
+$ npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Uso
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Aperte o botão 'Novo Mapa' para gerar um novo mapa
+2. Aperte o Botão 'Pintar casas' para pintar casas
