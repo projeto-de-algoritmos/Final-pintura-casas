@@ -22,7 +22,7 @@ pintadas, pois ela não tem tempo a perder.
 
 ## Apresentação
 
-Um vídeo da apresentação pode ser encontrado [AQUI]().
+Um vídeo da apresentação pode ser encontrado [AQUI](https://github.com/projeto-de-algoritmos/Final-pintura-casas/blob/main/video.mp4).
 
 ## Screenshots
 
